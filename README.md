@@ -18,11 +18,17 @@ Note that: If there are any merge conflicts, then it has to be manually updated.
 # **Initially site will be running**
 Container                  |  Site
 :-------------------------:|:-------------------------:
-![]  |  ![]
+![](images/ic.png)  |  ![](images/io.png)
 
 # **JENKINS**
 
-JOB1: As soon as developer pushes the new code to the developer branch Jenkins will fetch the code from github and deploy on developer docker environment
+## JOB1: As soon as developer pushes the new code to the developer branch Jenkins will fetch the code from github and deploy on developer docker environment
+![](images/j11.png)
+![](images/j12.png)
+![](images/j13.png)
+![](images/j14.png)
+
+### Execute Shell Code:
 
      sudo cp -v * /root/developer/
      if  sudo docker ps|grep mlopsdev
@@ -33,8 +39,10 @@ JOB1: As soon as developer pushes the new code to the developer branch Jenkins w
      fi
 
 
-JOB2: Whenever developer pushes to the master branch, then Jenkins will fetch from master and deploy it on docker master-docker environment.
-(both developer-docker and master-docker environments are on different containers)
+## JOB2: Whenever developer pushes to the master branch, then Jenkins will fetch from master and deploy it on docker master-docker environment.
+## (both developer-docker and master-docker environments are on different containers)
+
+### Execute Shell Code:
 
     sudo cp -v * /root/master/
     if  sudo docker ps|grep mlopsmaster
@@ -47,4 +55,4 @@ JOB2: Whenever developer pushes to the master branch, then Jenkins will fetch fr
 
 
 
-JOB3: Quality Assessment Team will manually test the website running in developer-docker environment. If it is running fine, they will trigger Jenkins next job which will merge the developer branch to master branch.
+## JOB3: Quality Assessment Team will manually test the website running in developer-docker environment. If it is running fine, they will trigger Jenkins next job which will merge the developer branch to master branch.
