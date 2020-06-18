@@ -15,14 +15,14 @@ Note that: If there are any merge conflicts, then it has to be manually updated.
  * install git in linux.To install [click here](https://git-scm.com/download/linux)
  
  
-# **Initially site will be running**
+# **Initially the website will be running**
 Container                  |  Site
 :-------------------------:|:-------------------------:
 ![](images/ic.png)  |  ![](images/io.png)
 
 # **JENKINS**
 
-### Job1: As soon as developer pushes the new code to the developer branch Jenkins will fetch the code from github and deploy on developer docker environment
+### Job1 : As soon as developer pushes the new code to the developer branch Jenkins will fetch the code from github and deploy on docker-developer environment
 ![](images/j11.png)
 ![](images/j12.png)
 ![](images/j13.png)
@@ -38,9 +38,11 @@ Container                  |  Site
        sudo docker run -dit -p 6996:80 -v /root/developer/:/usr/local/apache2/htdocs/ --name mlopsdev httpd:latest
      fi
 
+### Below shown is the launched container
+![](images/rc.png)
 
-### Job2: Whenever developer pushes to the master branch, then Jenkins will fetch from master and deploy it on docker master-docker environment.
-## (both developer-docker and master-docker environments are on different containers)
+### Job2 : Whenever developer pushes to the master branch, then Jenkins will fetch from master and deploy it on docker master-docker environment.
+### (both developer-docker and master-docker environments are different containers)
 
 ![](images/j21.png)
 ![](images/j22.png)
@@ -60,7 +62,7 @@ Container                  |  Site
 
 
 
-### Job3: Quality Assessment Team will manually test the website running in developer-docker environment. If it is running fine, they will trigger Jenkins next job which will merge the developer branch to master branch.
+### Job3 : Quality Assessment Team will manually test the website running in developer-docker environment. If it is running fine, they will trigger Jenkins next job which will merge the developer branch to master branch.
 
 ![](images/j31.png)
 ![](images/j32.png)
@@ -68,7 +70,9 @@ Container                  |  Site
 ![](images/j34.png)
 ![](images/j35.png)
 
+### Once after the new code is updated at the Master branch the website will be updated.
+### The updated website is shown below
 
-Container                  |  Site
-:-------------------------:|:-------------------------:
-![](images/rc.png)  |  ![](images/ro.png)
+
+
+ ![](images/ro.png)
