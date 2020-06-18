@@ -70,9 +70,7 @@ Container                  |  Site
 ![](images/j34.png)
 ![](images/j35.png)
 
-### Once after the new code is updated at the Master branch the website will be updated.
+### Once after the new code is updated at the Master branch the website also gets updated.
 ### The updated website is shown below
 
-
-
- ![](images/ro.png)
+![](images/ro.png)
