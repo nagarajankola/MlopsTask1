@@ -22,7 +22,7 @@ Container                  |  Site
 
 # **JENKINS**
 
-## JOB1: As soon as developer pushes the new code to the developer branch Jenkins will fetch the code from github and deploy on developer docker environment
+### Job1: As soon as developer pushes the new code to the developer branch Jenkins will fetch the code from github and deploy on developer docker environment
 ![](images/j11.png)
 ![](images/j12.png)
 ![](images/j13.png)
@@ -39,8 +39,13 @@ Container                  |  Site
      fi
 
 
-## JOB2: Whenever developer pushes to the master branch, then Jenkins will fetch from master and deploy it on docker master-docker environment.
+### Job2: Whenever developer pushes to the master branch, then Jenkins will fetch from master and deploy it on docker master-docker environment.
 ## (both developer-docker and master-docker environments are on different containers)
+
+![](images/j21.png)
+![](images/j22.png)
+![](images/j23.png)
+![](images/j24.png)
 
 ### Execute Shell Code:
 
@@ -55,4 +60,15 @@ Container                  |  Site
 
 
 
-## JOB3: Quality Assessment Team will manually test the website running in developer-docker environment. If it is running fine, they will trigger Jenkins next job which will merge the developer branch to master branch.
+### Job3: Quality Assessment Team will manually test the website running in developer-docker environment. If it is running fine, they will trigger Jenkins next job which will merge the developer branch to master branch.
+
+![](images/j31.png)
+![](images/j32.png)
+![](images/j33.png)
+![](images/j34.png)
+![](images/j35.png)
+
+
+Container                  |  Site
+:-------------------------:|:-------------------------:
+![](images/rc.png)  |  ![](images/ro.png)
